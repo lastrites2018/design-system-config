@@ -22,6 +22,7 @@ module.exports = function (api) {
 
   const plugins = [
     'lodash',
+    '@babel/transform-runtime',
   ];
 
   return {
