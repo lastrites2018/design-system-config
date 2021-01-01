@@ -1,3 +1,4 @@
 storybook-static/
 __snapshots__/
 node_modules/
+dist/
