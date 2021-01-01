@@ -14,6 +14,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'eol-last': ['error', 'always'],
     semi: 2,
