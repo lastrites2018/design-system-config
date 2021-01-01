@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
 
 const extensions = ['.ts', '.tsx'];
 const inputSrc = [
@@ -24,6 +25,9 @@ export default inputSrc
           babelHelpers: 'runtime',
           exclude: 'node_modules/**',
           extensions,
+        }),
+        postcss({
+          plugins: [],
         }),
       ],
       preserveModules: true,
