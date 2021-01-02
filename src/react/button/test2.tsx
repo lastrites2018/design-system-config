@@ -5,5 +5,5 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button2 = ({ children, ...props }: Props) => {
-  return <button {...props}>2 {children}</button>;
+  return <button className='p-4' {...props}>2 {children}</button>;
 };
