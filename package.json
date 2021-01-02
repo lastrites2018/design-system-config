@@ -1,5 +1,5 @@
 {
-  "name": "design-system-config",
+  "name": "@soyoung210/design-system-config",
   "version": "1.0.0",
   "description": "design system config example",
   "main": "dist/cjs/index.js",

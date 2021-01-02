@@ -21,7 +21,7 @@ jobs:
       - name: Install Packages
         run: npm ci
       - name: Add npmrc
-        run : echo "registry=https://npm.pkg.github.com/@SoYoung210" > ~/.npmrc
+        run : echo "registry=https://npm.pkg.github.com/@soyoung210" > ~/.npmrc
       - name: Build Lib
         run: npm run build
         env:
