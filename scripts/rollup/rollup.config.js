@@ -1,4 +1,5 @@
 import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
@@ -17,15 +18,18 @@ export default inputSrc
         format: 'es',
       },
       plugins: [
-        peerDepsExternal(),
-        nodeResolve({
-          extensions,
-        }),
         babel({
           babelHelpers: 'runtime',
           exclude: 'node_modules/**',
           extensions,
         }),
+        nodeResolve({
+          extensions,
+        }),
+        commonjs({
+          extensions: [...extensions, '.js'],
+        }),
+        peerDepsExternal(),
         postcss({
           plugins: [],
         }),
