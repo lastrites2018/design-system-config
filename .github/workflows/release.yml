@@ -24,7 +24,7 @@ jobs:
       - name: Add GiHub Package Token
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_TOKEN }}" > ~/.npmrc
       - name: Build Lib
-        run: npm run build:rollup
+        run: npm run build:webpack
         env:
           BUILD_ENV: release
       - name: Semantic Release
