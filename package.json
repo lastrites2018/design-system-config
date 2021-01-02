@@ -7,6 +7,7 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "test",
+    "check-types": "tsc --noEmit",
     "build:rollup": "rimraf ./dist2 && rollup -c ./scripts/rollup/rollup.config.js && npm run build:types2",
     "build": "rimraf ./dist && npm run build:esm && npm run build:types",
     "build:esm": "BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
