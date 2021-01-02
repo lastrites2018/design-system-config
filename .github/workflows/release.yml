@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.18.0'
+      - name: Install Packages
+        run: npm ci
+      - name: Add GiHub Package Token
+        run : echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_TOKEN }}" > ~/.npmrc
+      - name: Build Lib
+        run: npm run build
+        env:
+          BUILD_ENV: release
+      - name: Semantic Release
+        run: npm run semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.PACKAGE_TOKEN }}
