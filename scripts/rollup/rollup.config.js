@@ -37,6 +37,5 @@ export default inputSrc
           plugins: [],
         }),
       ],
-      preserveModules: true,
     };
   });
