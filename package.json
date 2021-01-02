@@ -8,6 +8,7 @@
   "scripts": {
     "test": "test",
     "check-types": "tsc --noEmit",
+    "semantic-release": "semantic-release",
     "build:rollup": "rimraf ./dist2 && rollup -c ./scripts/rollup/rollup.config.js && npm run build:types2",
     "build": "rimraf ./dist && npm run build:esm && npm run build:types",
     "build:esm": "BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
@@ -49,6 +50,7 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.0",
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-knobs": "^6.1.11",
     "@storybook/react": "^6.1.11",
