@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "build:rollup": "rimraf ./dist2 && rollup -c ./scripts/rollup/rollup.config.js && npm run build:types2",
-    "build": "rimraf ./dist && npm run build:esm && npm run build:types",
+    "build": "rimraf ./dist && npm run build:esm && npm run build:cjs && npm run build:types",
     "build:esm": "BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:cjs": "BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist/cjs --source-maps",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
