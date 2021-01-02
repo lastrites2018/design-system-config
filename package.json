@@ -5,9 +5,12 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@soyoung210"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist2/cjs/index.js",
+  "module": "dist2/esm/index.js",
+  "types": "dist2/types/index.d.ts",
+  "files": [
+    "dist2"
+  ],
   "scripts": {
     "test": "test",
     "check-types": "tsc --noEmit",
