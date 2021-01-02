@@ -20,8 +20,8 @@ jobs:
           node-version: '12.18.0'
       - name: Install Packages
         run: npm ci
-      - name: Add GiHub Package Token
-        run : echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_TOKEN }}" > ~/.npmrc
+      - name: Add npmrc
+        run : echo "registry=https://npm.pkg.github.com/@SoYoung210" > ~/.npmrc
       - name: Build Lib
         run: npm run build
         env:
