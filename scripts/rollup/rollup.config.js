@@ -18,8 +18,10 @@ export default inputSrc
       output: {
         dir: `dist2/${format}`,
         format,
+        exports: 'auto',
       },
       external: [/@babel\/runtime/],
+      preserveModules: format === 'cjs',
       plugins: [
         babel({
           babelHelpers: 'runtime',
