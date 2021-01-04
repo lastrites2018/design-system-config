@@ -5,11 +5,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@soyoung210"
   },
-  "main": "dist3/cjs/index.js",
-  "module": "dist3/design_system_config.esm.js",
-  "types": "dist3/types/index.d.ts",
+  "main": "dist2/cjs/src/index.js",
+  "module": "dist2/es/index.js",
+  "types": "dist2/types/index.d.ts",
   "files": [
-    "dist3"
+    "dist2"
   ],
   "scripts": {
     "test": "test",
