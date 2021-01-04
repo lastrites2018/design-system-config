@@ -7,17 +7,19 @@ import { terser } from 'rollup-plugin-terser';
 
 const extensions = ['.ts', '.tsx'];
 const inputSrc = [
-  ['./src/index.ts'],
+  ['./src/index.ts', 'es'],
+  ['./src/index.ts', 'cjs'],
 ];
 
 export default inputSrc
-  .map(([input, file]) => {
+  .map(([input, format]) => {
     return {
       input,
       output: {
-        dir: 'dist2',
-        format: 'es',
+        dir: `dist2/${format}`,
+        format,
       },
+      external: [/@babel\/runtime/],
       plugins: [
         babel({
           babelHelpers: 'runtime',
