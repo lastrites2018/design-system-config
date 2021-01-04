@@ -1,6 +1,6 @@
 {
   "name": "@soyoung210/design-system-config",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "design system config example",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@soyoung210"
