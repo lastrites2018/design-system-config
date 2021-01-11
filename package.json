@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "test": "test",
+    "depcruise": "depcruise --validate -- src",
     "check-types": "tsc --noEmit",
     "semantic-release": "semantic-release",
     "prebuild:webpack": "rimraf ./dist3",
@@ -73,6 +74,7 @@
     "babel-plugin-lodash": "^3.3.4",
     "css-loader": "^5.0.1",
     "cssnano": "^4.1.10",
+    "dependency-cruiser": "^9.21.6",
     "eslint": "^7.16.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
