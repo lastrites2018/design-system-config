@@ -22,3 +22,5 @@ jobs:
         run: npm run check-types
       - name: Build lib
         run: npm run build
+      - name: import누락 체크
+        run: npm run depcruise
